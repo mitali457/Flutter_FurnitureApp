@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furnitureapp/route/routes.dart';
 import 'package:furnitureapp/screens/product.dart';
 import 'package:furnitureapp/widgets/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,6 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Furniture app',
+      routes: Routes.getRoutes(),
+      initialRoute: '/',
       theme: ThemeData(
         // We set Poppins as our default font
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         accentColor: kPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-     home: ProductsScreen(),
+     //home: ProductsScreen(),
     );
   }
 }
